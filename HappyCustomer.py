@@ -14,13 +14,13 @@ review_data = review_data.drop(['X4', 'X6'], axis=1 )
 X = review_data.drop(['Y'], axis=1)
 y = review_data['Y']
 
-x_train, x_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 
 classifier = RandomForestClassifier(n_estimators=10, random_state=0)
 
-classifier.fit(x_train, y_train)
+classifier.fit(X_train, y_train)
 
-prediction = classifier.predict(x_test)
+prediction = classifier.predict(X_test)
 
 print(prediction)
 print(classification_report(y_test, prediction))
