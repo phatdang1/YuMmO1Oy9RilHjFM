@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from train_classifier import prepTrainingData
 from sklearn.model_selection import KFold, cross_val_score
 from sklearn.metrics import classification_report, accuracy_score
+import pandas as pd
 
 #Function to do cross validation
 def crossValidationNKFold(X, y, model, test_size, K):
@@ -29,5 +30,8 @@ def reportAndScore(X, y, model, test_size):
         print(classification_report(y_test, prediction, zero_division=0))
     else:
         print(classification_report(y_test, prediction))
-
+    
+    # This piece of code below was used to select important features
+    # important_feats = pd.Series(Classifier.feature_importances_, index = X.columns)
+    # print(important_feats.nlargest(10))
    
