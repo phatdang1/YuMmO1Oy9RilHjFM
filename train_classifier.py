@@ -18,7 +18,7 @@ def prepTrainingData(data, result, testPercent, classifierType):
     elif classifierType == "DT":
         classifier = DecisionTreeClassifier()
     else:
-        classifier = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5,2), random_state=1)
+        classifier = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5,2), random_state=0)
 
     # training the classifier
     classifier.fit(X_train, y_train)

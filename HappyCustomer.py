@@ -8,10 +8,10 @@ review_data = readAndProcessCsv('ACME-HappinessSurvey2020.csv', False)
 list_of_review = review_data.columns.values.tolist()
 
 #remove unimportant features
-review_data = review_data.drop(['X4', 'X6'], axis=1 )
+review_data = review_data.drop(['X4', 'X6', 'X2'], axis=1 )
 
 # seperate result from training data
 X, y = dropColumn(review_data, 'Y')
 
 # print out the result and score
-reportAndScore(X, y, model, 0.2)
+reportAndScore(X, y, model, 0.5)
