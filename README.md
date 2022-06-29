@@ -1,11 +1,11 @@
 # 3nxnFeQLJQzPbZY3
 Machine learning project - Happy Customer
 
-Getting feedback from customers is not easy either, but we do our best to get constant feedback from our customers. This is a crucial function to improve our operations across all levels.
-
-We recently did a survey to a select customer cohort. You are presented with a subset of this data. We will be using the remaining data as a private test set.
-
 Data Description:
+
+feedbacks from customers based on on-demand delivery to our customers. During the COVID-19 pandemic.
+
+The Data below already encoded into digital number based on custormer scores based on the 6 categories below:
 
 Y = target attribute (Y) with values indicating 0 (unhappy) and 1 (happy) customers
 X1 = my order was delivered on time
@@ -26,9 +26,33 @@ Goal(s):
 Predict if a customer is happy or not based on the answers they give to questions asked.
 
 Attempts:
-In this project I use the following model: K-Nearest Neighbor, Random Forest Classifier, Decision Tree, and Neural Network.
+In this project I use the following model: K-Nearest Neighbor, and Random Forest Classifier.
+Using K-Nearest Neighbor:
+
+              precision    recall  f1-score   support
+
+           0       0.67      0.62      0.64        13
+           1       0.64      0.69      0.67        13
+
+    accuracy                           0.65        26
+   macro avg       0.65      0.65      0.65        26
+weighted avg       0.65      0.65      0.65        26
+
+Using Random Forest Classifier:
+
+              precision    recall  f1-score   support
+
+           0       0.86      0.58      0.69        33
+           1       0.66      0.90      0.76        30
+
+    accuracy                           0.73        63
+   macro avg       0.76      0.74      0.73        63
+weighted avg       0.77      0.73      0.72        63
 
 Result:
-Random Forest Classification and Neural Network give the highest accuracy using 5-fold cross validation
+Random Forest Classification and Neural Network give the highest accuracy, percision and f1-score. 
+
+Discussion:
+Due to the small number of training data, the highest accuracy that this model can reach is 73%. 
 
 
